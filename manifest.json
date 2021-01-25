@@ -1,0 +1,31 @@
+
+{
+	"name": "Continue Watching for YouTube",
+	"version": "1.0.1",
+	"description": "An extension that shows you your unfinished youtube videos at the top of your feed",
+  "manifest_version": 2,
+	"permissions": [
+        "*://*/*",
+		"tabs",
+		"storage"
+	],
+	"content_scripts": [
+	  {
+		"matches": [
+			"http://*/*",
+			"https://*/*"
+		],
+		"js": [
+		  "content.js"
+		]
+	  }
+	],
+	"background": {
+		"scripts": [
+	   "background.js"
+	]
+	},
+	"browser_action": {
+	"default_title": "Continue Watching for YouTube"
+	}
+  }
